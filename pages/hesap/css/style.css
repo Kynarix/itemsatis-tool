@@ -23,8 +23,6 @@ body {
     position: relative;
     overflow-x: hidden;
 }
-
-/* Menü Butonu Stilleri */
 .menu-button {
     display: flex;
     align-items: center;
@@ -82,8 +80,6 @@ body {
     position: relative;
     z-index: 2;
 }
-
-/* Menü butonu animasyonu */
 @keyframes pulse {
     0% {
         box-shadow: 0 0 0 0 rgba(0, 255, 163, 0.7);
@@ -95,8 +91,6 @@ body {
         box-shadow: 0 0 0 0 rgba(0, 255, 163, 0);
     }
 }
-
-/* Header Styles */
 header {
     padding: 20px 0;
     position: sticky;
@@ -161,12 +155,10 @@ nav {
     color: var(--primary-color);
 }
 
-/* Main Content Styles */
 main {
     padding-top: 20px;
 }
 
-/* Sidepanel */
 .sidepanel {
     height: 100%;
     width: 0;
@@ -252,7 +244,6 @@ main {
     font-weight: 500;
 }
 
-/* Sidepanel overlay */
 #sidepanel-overlay {
     position: fixed;
     top: 0;
@@ -267,7 +258,6 @@ main {
     opacity: 0;
 }
 
-/* Özel Bölüm Stilleri */
 .special-section {
     padding: 80px 0;
     background-color: rgba(18, 18, 18, 0.7);
@@ -500,7 +490,6 @@ main {
     margin-top: 10px;
 }
 
-/* Footer Styles */
 footer {
     background-color: var(--dark-color);
     padding: 40px 0 20px;
