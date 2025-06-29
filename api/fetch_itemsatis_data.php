@@ -32,7 +32,7 @@ try {
     $xpath = new DOMXPath($dom);
     $data = [];
 
-    $titleNode = $xpath->query('/html/body/section[2]/div/div[2]/div[2]/div[1]/h1')->item(0);
+    $titleNode = $xpath->query('/html/body/section[2]/div/div[3]/div[2]/div[1]/div[1]/h1')->item(0);
     if ($titleNode) {
         $fullTitle = trim($titleNode->textContent);
         $data['title'] = preg_replace('/(^#\d+)|#\d+$/', '', $fullTitle);
@@ -41,7 +41,7 @@ try {
         $data['title'] = '';
     }
 
-    $imageNode = $xpath->query('//img[@data-fancybox="gallery"]')->item(0);
+    $imageNode = $xpath->query('/html/body/section[2]/div/div[3]/div[1]/div[1]/div[1]/a/img')->item(0);
     if ($imageNode) {
         $data['image'] = $imageNode->getAttribute('href');
         if (empty($data['image'])) {
@@ -53,7 +53,7 @@ try {
 
     $categoryNode = $xpath->query('/html/body/section[1]/div/ol/li[3]/a/span')->item(0);
     $data['area'] = $categoryNode ? trim($categoryNode->textContent) : '';
-    $sellerNode = $xpath->query('/html/body/section[2]/div/div[2]/div[3]/div[1]/div/div[1]/div[1]/div/a/b')->item(0);
+    $sellerNode = $xpath->query('/html/body/section[2]/div/div[3]/div[3]/div[1]/div/div[1]/div[1]/div/a/b')->item(0);
     $data['seller'] = $sellerNode ? trim($sellerNode->textContent) : '';
 
     $sellerImageNode = $xpath->query('//*[@id="sellerAvatarImg"]')->item(0);
@@ -62,7 +62,7 @@ try {
     } else {
         $data['seller_image'] = '';
     }
-    $sellerLevelNode = $xpath->query('/html/body/section[2]/div/div[2]/div[3]/div[1]/div/div[1]/div[1]/div/div/div[1]')->item(0);
+    $sellerLevelNode = $xpath->query('/html/body/section[2]/div/div[3]/div[3]/div[1]/div/div[1]/div[1]/div/div/div[1]')->item(0);
     $data['seller_level'] = $sellerLevelNode ? trim($sellerLevelNode->textContent) : '';
 
     $date = new DateTime();

@@ -97,7 +97,8 @@
                                             <span class="social-icon itemsatis"><i class="fas fa-shopping-cart"></i></span>
                                             <span>ItemSatis.com</span>
                                         </a>
-                                        <a href="pages/hesap/hesap.php" class="social-link hesapcomtr">
+                                        <a href="" class="social-link hesapcomtr">
+                                        <!--  <a href="pages/hesap/hesap.php" class="social-link hesapcomtr"> -->
                                             <span class="social-icon hesapcomtr"><i class="fas fa-user"></i></span>
                                             <span>Hesap.com.tr</span>
                                         </a>
